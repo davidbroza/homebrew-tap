@@ -1,8 +1,8 @@
 class Skillchart < Formula
   desc "Dashboard for Claude Code skills — see context cost and find optimizations"
   homepage "https://github.com/davidbroza/skillchart"
-  url "https://github.com/davidbroza/skillchart/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "a3717ba1b7a9bd0c2b01860aa2f1074dca0ab9acd356349f42d4ffa35d6a3260"
+  url "https://github.com/davidbroza/skillchart/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "7dd2d7d3342042a79b2baa93880645b3bd3b6b1c53b2e88836d17a63532938a5"
   license "MIT"
 
   uses_from_macos "python", since: :catalina
