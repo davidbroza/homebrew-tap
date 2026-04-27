@@ -1,0 +1,19 @@
+class Skillchart < Formula
+  desc "Dashboard for Claude Code skills — see context cost and find optimizations"
+  homepage "https://github.com/davidbroza/skillchart"
+  url "https://github.com/davidbroza/skillchart/archive/refs/tags/v0.1.0.tar.gz"
+  sha256 "a3717ba1b7a9bd0c2b01860aa2f1074dca0ab9acd356349f42d4ffa35d6a3260"
+  license "MIT"
+
+  uses_from_macos "python", since: :catalina
+
+  def install
+    libexec.install "build.py"
+    (libexec/"bin").install "bin/skillchart"
+    bin.install_symlink libexec/"bin/skillchart"
+  end
+
+  test do
+    assert_match "name", shell_output("#{bin}/skillchart --json --no-open")
+  end
+end
